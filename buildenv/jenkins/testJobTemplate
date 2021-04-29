@@ -326,8 +326,22 @@ ARCH_OS_LIST.each { ARCH_OS ->
 							    sectionHeaderStyle(sectionHeaderHelpTextStyleCss)
 							}
 							choiceParam('TEST_FLAG', ['', 'JITAAS', 'AOT'], "Optional. Only set to JITAAS/AOT for JITAAS/AOT feature testing.")
-							stringParam('EXTRA_OPTIONS', EXTRA_OPTIONS, "Use this to append options to the test command")
-							stringParam('JVM_OPTIONS', "", "Use this to replace the test original command line options")
+							stringParam('EXTRA_OPTIONS', EXTRA_OPTIONS, "Use this to append options to the test command",'''
+							Example 1:<br>
+							TARGET=<br>
+							CUSTOM_TARGET=<br>
+							Example 2:<br>
+							TARGET=<br>
+							CUSTOM_TARGET=<br>
+							''')
+							stringParam('JVM_OPTIONS', "", "Use this to replace the test original command line options",'''
+							Example 1:<br>
+							TARGET=<br>
+							CUSTOM_TARGET=<br>
+							Example 2:<br>
+							TARGET=<br>
+							CUSTOM_TARGET=<br>
+							''')
 							stringParam('BUILD_IDENTIFIER', "", "build identifier")
 							stringParam('ITERATIONS',"1", "Number of times to repeat execution of test target")
 							stringParam('TIME_LIMIT', TIME_LIMIT, "time limit")
